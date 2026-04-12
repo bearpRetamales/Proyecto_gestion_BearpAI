@@ -44,7 +44,9 @@ Fuentes → Ingesta → Bronze → Procesamiento (Apache Spark) → Silver → G
 - Espacio en disco: mínimo 10 GB  
 
 ---
+### diagramas
 
+![DFD](Christmas Shopping Decision-2026-04-12-204555.png)
 ## Instrucciones de Instalación
 
 ### 1. Clonar el repositorio
@@ -52,4 +54,4 @@ Fuentes → Ingesta → Bronze → Procesamiento (Apache Spark) → Silver → G
 git clone https://github.com/TU-USUARIO/Proyecto_gestion_BearpAI.git
 cd Proyecto_gestion_BearpAI
 
-![DFD](Christmas Shopping Decision-2026-04-12-204555.png)
+
