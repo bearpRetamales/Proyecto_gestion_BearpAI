@@ -1,7 +1,7 @@
 # Proyecto Lakehouse – Gestión de Datos para IA
 
 ## Descripción del Proyecto
-Este proyecto implementa una plataforma de gestión y análisis de datos basada en arquitectura Lakehouse, orientada al procesamiento de información de un sistema tipo Ecomarket.
+Este proyecto implementa una plataforma de gestión y análisis de datos basada en arquitectura Lakehouse, orientada al procesamiento de información de un sistema tipo IAMarket.
 
 La solución permite integrar múltiples fuentes de datos, almacenarlas en distintas capas (Bronze, Silver y Gold), procesarlas mediante Apache Spark y exponer los resultados a través de dashboards y servicios API.
 
