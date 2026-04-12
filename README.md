@@ -44,9 +44,7 @@ Fuentes → Ingesta → Bronze → Procesamiento (Apache Spark) → Silver → G
 - Espacio en disco: mínimo 10 GB  
 
 ---
-### diagramas
 
-![DFD](Christmas Shopping Decision-2026-04-12-204555.png)
 ## Instrucciones de Instalación
 
 ### 1. Clonar el repositorio
