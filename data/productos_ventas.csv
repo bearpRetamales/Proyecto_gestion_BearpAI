@@ -1,0 +1,11 @@
+id_producto,nombre_producto,categoria,stock_actual,ventas_diarias_promedio,punto_reposicion
+1,Arroz Grano Largo 1kg,Abarrotes,15,25,20
+2,Aceite Vegetal 1L,Abarrotes,8,12,10
+3,Leche Entera 1L,Lacteos,45,15,20
+4,Harina de Trigo 1kg,Abarrotes,12,20,15
+5,Detergente Multiuso,Limpieza,5,10,8
+6,Azucar Blanca 1kg,Abarrotes,60,18,25
+7,Fideos Spaghetti,Abarrotes,10,30,20
+8,Cafe Instantaneo,Despensa,4,6,5
+9,Papel Higienico 4un,Limpieza,50,12,15
+10,Sal Lobos 1kg,Abarrotes,100,5,10
