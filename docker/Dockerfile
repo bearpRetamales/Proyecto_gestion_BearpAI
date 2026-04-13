@@ -1,0 +1,4 @@
+FROM postgres:15
+ENV POSTGRES_DB=iamarket_db
+ENV POSTGRES_USER=xxxxx
+ENV POSTGRES_PASSWORD=xxxxx
