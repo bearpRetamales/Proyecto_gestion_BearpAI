@@ -1,4 +1,4 @@
-# Predicción de Dashboards de datos en market
+# Sistema de analítica y predicción de stock en un market mediante arquitectura Lakehouse
 
 Este proyecto implementa una arquitectura Lakehouse para centralizar y transformar datos de ventas, productos y usuarios de un market. El sistema convierte datos crudos en conocimiento estratégico, facilitando la toma de decisiones basada en tendencias de consumo y rendimiento de productos. Además, establece los cimientos para capacidades avanzadas de IA, como la optimización de inventarios y personalización de ofertas
 ---
