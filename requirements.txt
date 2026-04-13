@@ -1,0 +1,6 @@
+pandas
+pyspark
+scikit-learn
+sqlalchemy
+psycopg2-binary
+delta-spark
