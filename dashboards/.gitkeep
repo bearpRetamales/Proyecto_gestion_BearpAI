@@ -1,0 +1,6 @@
+Se carga la captura del Dashboard de Metabase que representa la Capa Gold de nuestro Lakehouse. 
+
+Este tablero visualiza:
+- Alertas de agotamiento de stock en tiempo real.
+- Predicciones de quiebre de inventario basadas en el modelo de IA.
+- Resumen ejecutivo para la toma de decisiones del administrador de IAMarket.
