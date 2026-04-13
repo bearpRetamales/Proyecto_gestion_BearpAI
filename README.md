@@ -6,7 +6,7 @@ Este proyecto implementa una arquitectura Lakehouse para centralizar y transform
 ## Componentes del sistema
 
 - **Scripts de procesamiento**: Flujos automatizados de ingesta, limpieza y transformación siguiendo el paradigma de capas (Bronze, Silver, Gold).
-- **Base de datos PostgreSQL**: Repositorio para la carga de datos procesados y consultas estructuradas de alto rendimiento.
+- **PostgreSQL** Data Warehouse donde se almacenan los datos de la capa Gold para consumo analítico.
 - **Modelo de IA (scikit-learn)**: Algoritmo de clasificación binaria entrenado para predecir el riesgo de agotamiento de productos.
 - **visualizacion (metabase/powerBI)**: dashboard de visualización de resultados.
 - **Documentación**: Diseño técnico detallado y planificación de gestión (enfoque mixto).
