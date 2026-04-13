@@ -1,55 +1,110 @@
-# Proyecto Lakehouse – Gestión de Datos para IA
+# Predicción de Dashboards de datos en market
 
-## Descripción del Proyecto
-Este proyecto implementa una plataforma de gestión y análisis de datos basada en arquitectura Lakehouse, orientada al procesamiento de información de un sistema tipo IAMarket.
+Este proyecto implementa una arquitectura Lakehouse para centralizar y transformar datos de ventas, productos y usuarios de un market. El sistema convierte datos crudos en conocimiento estratégico, facilitando la toma de decisiones basada en tendencias de consumo y rendimiento de productos. Además, establece los cimientos para capacidades avanzadas de IA, como la optimización de inventarios y personalización de ofertas
+---
 
-La solución permite integrar múltiples fuentes de datos, almacenarlas en distintas capas (Bronze, Silver y Gold), procesarlas mediante Apache Spark y exponer los resultados a través de dashboards y servicios API.
+## Componentes del sistema
 
-El sistema está diseñado para soportar tanto datos estructurados como no estructurados, y sirve como base para futuras aplicaciones de inteligencia artificial.
+- **Scripts de procesamiento**: Flujos automatizados de ingesta, limpieza y transformación siguiendo el paradigma de capas (Bronze, Silver, Gold).
+- **Base de datos PostgreSQL**: Repositorio para la carga de datos procesados y consultas estructuradas de alto rendimiento.
+- **Modelo de IA (scikit-learn)**: Algoritmo de clasificación binaria entrenado para predecir el riesgo de agotamiento de productos.
+- **visualizacion (metabase/powerBI)**: dashboard de visualización de resultados.
+- **Documentación**: Diseño técnico detallado y planificación de gestión (enfoque mixto).
 
 ---
 
-## Arquitectura Seleccionada
-Se utiliza una arquitectura Lakehouse, que combina las ventajas de un Data Lake y un Data Warehouse, permitiendo almacenamiento escalable y análisis eficiente.
+## Tecnologías utilizadas
 
-### Modelo Medallion
-
-| Capa   | Descripción |
-|--------|------------|
-| Bronze | Datos crudos sin procesar |
-| Silver | Datos limpios y estructurados |
-| Gold   | Datos listos para análisis |
-
-### Flujo de Datos
-
-Fuentes → Ingesta → Bronze → Procesamiento (Apache Spark) → Silver → Gold → Servicio → Usuarios
+-Git
+-Docker
+-Python 3.9 o superior
+-Apache Spark
+-PostgreSQL (opcional)
+-Power BI o herramienta de visualización equivalente
 
 ---
 
-## Requisitos y Configuración del Entorno
+## Pipeline implementado
 
-### Herramientas necesarias
-
-- Git  
-- Docker  
-- Python 3.9 o superior  
-- Apache Spark  
-- PostgreSQL (opcional)  
-- Power BI o herramienta de visualización equivalente  
-
-### Requisitos del sistema
-
-- Sistema operativo: Windows, Linux o macOS  
-- Memoria RAM: 8 GB recomendados  
-- Espacio en disco: mínimo 10 GB  
+| Etapa | Descripción |
+|-------|-------------|
+| 1. Diseño e instalación | Configuración de arquitectura Lakehouse en Docker y estructura de carpetas del proyecto. |
+| 2. Ingesta (Capa Bronze) | Lectura de fuentes (CSV/Mockaroo) y almacenamiento persistente en Delta Lake / Parquet. |
+| 3. Limpieza (Capa Silver) | Procesamiento con Spark para eliminación de duplicados, manejo de nulos y tipado de datos. |
+| 4. Transformación (Capa Gold) | Creación de variables de negocio (días sin reposición, tasa de ventas) y tablas agregadas. |
+| 5. Validación | Control de calidad mediante Spark SQL para asegurar coherencia y rangos válidos. |
+| 6. Carga en PostgreSQL | Migración de datos refinados (Capa Gold) a la base de datos para consumo de analítica. |
+| 7. Entrenamiento IA | Implementación de clasificación binaria con scikit-learn para predecir agotamiento de stock. |
+| 8. Evaluación | Análisis de métricas (Accuracy, Recall) y validación de resultados del modelo predictivo. |
+| 9. Visualización | Despliegue de Dashboards en Power BI o Metabase con alertas de stock y KPIs de ventas. |
 
 ---
 
-## Instrucciones de Instalación
+## 📂 Estructura del repositorio
 
-### 1. Clonar el repositorio
-```bash
-git clone https://github.com/TU-USUARIO/Proyecto_gestion_BearpAI.git
-cd Proyecto_gestion_BearpAI
+```
+iamarket-bearpAI/
+├── .gitignore
+├── LICENSE
+├── README.md
+├── docker-compose.yml
+├── dashboards/
+│   └── imagen_referencial_powerBI.jfif
+├── data/
+│   ├── .gitkeep
+│   └── productos_ventas.csv
+├── docker/
+│   ├── .gitkeep
+│   └── Dockerfile
+├── docs/
+│   ├── Diagrama_flujo_datos.png
+│   ├── Diagrama_wbs(edt).png
+│   └── README_docs.md
+├── notebooks/
+│   ├── .gitkeep
+│   └── exploracion_inventario.ipynb
+└── scripts/
+    ├── .gitkeep
+    └── procesamiento.py
+```
+
+---
+
+## Cómo ejecutar el sistema (entorno ya instalado)
+
+1. Clonar el repositorio  
+   `git clone https://github.com/TU-USUARIO/Proyecto_gestion_BearpAI.git`
+
+2. Entrar a la carpeta del proyecto  
+   `cd Proyecto_gestion_BearpAI`
+
+3. Levantar la base de datos y dependencias  
+   `docker-compose up -d`  
+   `pip install -r requirements.txt`
+
+4. Ejecutar el pipeline de procesamiento  
+   `python scripts/procesamiento.py`
+
+5. Visualizar los resultados y métricas  
+   Revisar la carpeta `dashboards/` para ver las alertas y `notebooks/` para el análisis experimental.
+
+---
+
+## Documentación técnica
+
+Los documentos de planificación y diseño del Lakehouse están disponibles en:
+
+* **Diagrama de Flujo de Datos:** [`docs/Diagrama_flujo_datos.png`](docs/Diagrama_flujo_datos.png)
+* **Diagrama WBS (EDT):** [`docs/Diagrama_wbs(edt).png`](docs/Diagrama_wbs(edt).png)
+* **Guía de Documentación:** [`docs/README_docs.md`](docs/README_docs.md)
+
+---
+
+## Equipo
+
+- **Benjamín Retamales** – Responsable del ciclo completo:
+  - Ingesta, procesamiento y limpieza de datos.
+  - Modelado predictivo y lógica de negocio.
+  - Visualización (Dashboards) y documentación técnica.
 
 
