@@ -73,7 +73,7 @@ iamarket-bearpAI/
 ## Cómo ejecutar el sistema (entorno ya instalado)
 
 1. Clonar el repositorio  
-   `git clone https://github.com/TU-USUARIO/Proyecto_gestion_BearpAI.git`
+   `git clone https://github.com/bearpRetamales/Proyecto_gestion_BearpAI.git`
 
 2. Entrar a la carpeta del proyecto  
    `cd Proyecto_gestion_BearpAI`
