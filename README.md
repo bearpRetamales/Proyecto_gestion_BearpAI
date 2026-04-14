@@ -96,7 +96,7 @@ Los documentos de planificación y diseño del Lakehouse están disponibles en:
 
 * **Diagrama de Flujo de Datos:** [`docs/Diagrama_flujo_datos.png`](docs/Diagrama_flujo_datos.png)
 * **Diagrama WBS (EDT):** [`docs/Diagrama_wbs(edt).png`](docs/Diagrama_wbs(edt).png)
-* **Guía de Documentación:** [`docs/DOCUMENTO_DISEÑO_TECNICO_completo(1).docx`](docs/DOCUMENTO_DISEÑO_TECNICO_completo(1).docx.docx)
+* **Guía de Documentación:** [`docs/DOCUMENTO_DISEÑO_TECNICO_completo(1).docx`](docs/DOCUMENTO_DISEÑO_TECNICO_completo(1).docx)
 
 ---
 
